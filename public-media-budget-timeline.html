@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>公視／公廣預算爭議時間軸</title>
+  <style>
+    :root { --ink:#183139; --muted:#60757b; --paper:#f7f5ef; --panel:#fffdf8; --line:#cdd8d6; --accent:#007b77; --accent-soft:#d9efeb; --amber:#c47a18; --amber-soft:#fff0d6; }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--ink); background:radial-gradient(circle at 8% 0%, #e8f5f1 0 17%, transparent 36%), var(--paper); font-family:ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Noto Sans TC", sans-serif; }
+    main { max-width:1120px; margin:auto; padding:48px 24px 68px; }
+    .eyebrow { margin:0 0 10px; color:var(--accent); font-size:.8rem; font-weight:750; letter-spacing:.12em; text-transform:uppercase; }
+    h1 { max-width:800px; margin:0; font-family:ui-serif, Georgia, "Noto Serif TC", serif; font-size:clamp(2.1rem,5vw,4.4rem); line-height:1.05; letter-spacing:-.04em; }
+    .intro { max-width:720px; margin:18px 0 0; color:var(--muted); font-size:1.06rem; line-height:1.75; }
+    .metrics { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:34px 0; }
+    .metric { padding:18px; border:1px solid var(--line); border-radius:16px; background:rgba(255,253,248,.76); }
+    .metric strong { display:block; color:var(--accent); font-family:ui-serif, Georgia, serif; font-size:1.75rem; line-height:1.1; }
+    .metric span { display:block; margin-top:6px; color:var(--muted); font-size:.88rem; }
+    .timeline-shell { padding:28px; border:1px solid var(--line); border-radius:24px; background:var(--panel); box-shadow:0 16px 36px rgba(32,65,65,.07); }
+    .timeline-head { display:flex; justify-content:space-between; align-items:end; gap:20px; margin-bottom:24px; }
+    h2 { margin:0; font-size:1.2rem; }
+    .legend { margin:0; color:var(--muted); font-size:.87rem; }
+    .track { position:relative; padding:12px 0 6px; }
+    .rail { position:absolute; top:36px; left:2%; right:2%; height:2px; background:var(--line); }
+    .events { position:relative; display:grid; grid-template-columns:repeat(6, minmax(110px,1fr)); gap:8px; }
+    .event { min-height:155px; padding:0 8px 8px; border:0; background:transparent; color:inherit; cursor:pointer; font:inherit; text-align:left; }
+    .event:focus-visible { outline:3px solid var(--accent); outline-offset:4px; border-radius:8px; }
+    .dot { width:14px; height:14px; margin:17px 2px 16px; background:var(--accent); box-shadow:0 0 0 3px var(--panel), 0 0 0 4px var(--accent); transform:rotate(45deg); transition:transform .18s ease, background .18s ease; }
+    .event[data-kind="result"] .dot { background:var(--amber); box-shadow:0 0 0 2px var(--amber); }
+    .event[aria-selected="true"] .dot { transform:rotate(45deg) scale(1.42); }
+    .date { display:block; font-size:.84rem; font-weight:750; }
+    .label { display:block; margin-top:4px; color:var(--muted); font-size:.84rem; line-height:1.35; }
+    .detail { display:grid; grid-template-columns:minmax(0,1fr) 290px; gap:28px; margin-top:18px; padding:25px 0 0; border-top:1px solid var(--line); }
+    .tag { display:inline-block; padding:5px 9px; border-radius:999px; background:var(--accent-soft); color:#075954; font-size:.75rem; font-weight:750; }
+    .detail[data-kind="result"] .tag { background:var(--amber-soft); color:#86500c; }
+    h3 { margin:12px 0 9px; font-family:ui-serif, Georgia, "Noto Serif TC", serif; font-size:clamp(1.55rem,3vw,2.2rem); line-height:1.16; letter-spacing:-.025em; }
+    .bodycopy { margin:0; color:var(--muted); line-height:1.75; }
+    .facts { margin:0; padding:18px; border-radius:14px; background:#edf5f3; }
+    .facts dt { color:var(--muted); font-size:.75rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
+    .facts dd { margin:4px 0 16px; font-weight:650; line-height:1.45; }
+    .facts dd:last-child { margin-bottom:0; }
+    a { color:var(--accent); font-weight:700; }
+    footer { margin-top:24px; color:var(--muted); font-size:.82rem; line-height:1.55; }
+    @media (max-width:780px) { .metrics { grid-template-columns:1fr; } .timeline-shell { padding:20px; } .timeline-head { align-items:start; flex-direction:column; } .events { grid-template-columns:repeat(2,1fr); } .rail { display:none; } .event { min-height:auto; padding-bottom:20px; } .dot { margin-top:4px; } .detail { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">Taiwan public media · budget review</p>
+    <h1>公視／公廣預算爭議<br>時間軸</h1>
+    <p class="intro">從 2025 年的預算刪減提案，到 2026 年再次出現的大額刪凍案；點選時間軸節點，查看各階段的提案、回應與審查狀態。</p>
+
+    <section class="metrics" aria-label="事件摘要">
+      <div class="metric"><strong>23 億</strong><span>2025 年原始刪除提案規模</span></div>
+      <div class="metric"><strong>2,300 萬</strong><span>2025 年協商後的刪減結果</span></div>
+      <div class="metric"><strong>逾 10 億</strong><span>2026 年審查中的刪減／凍結提案</span></div>
+    </section>
+
+    <section class="timeline-shell" aria-labelledby="timeline-title">
+      <div class="timeline-head"><h2 id="timeline-title">點選事件</h2><p class="legend">◆ 提案／治理事件　◆ 協商後結果</p></div>
+      <div class="track"><div class="rail" aria-hidden="true"></div><div class="events" id="events"></div></div>
+      <article class="detail" id="detail" aria-live="polite">
+        <div><span class="tag" id="type"></span><h3 id="title"></h3><p class="bodycopy" id="description"></p><p><a id="source" target="_blank" rel="noreferrer">開啟 Mesh 收錄報導</a></p></div>
+        <dl class="facts"><dt>日期</dt><dd id="fact-date"></dd><dt>金額／規模</dt><dd id="amount"></dd><dt>狀態</dt><dd id="status"></dd></dl>
+      </article>
+    </section>
+    <footer>資料依 Mesh 收錄之鏡新聞與鏡週刊報導整理。2026 年「逾 10 億」為審查中提案，並非最終執行結果。</footer>
+  </main>
+  <script>
+    const data = [
+      { date:'2025/1 月中旬', label:'原提案', kind:'proposal', type:'預算提案', title:'114 年度：原提案刪除 23 億元', amount:'23 億元（原提案）', status:'後續協商調整', description:'提案方質疑公視預算由約 9 億升至 23 億，並質疑內容與經費使用。', source:'https://www.mnews.tw/story/20250121nm021' },
+      { date:'2025/1/20', label:'經費說明', kind:'proposal', type:'機構回應', title:'公視說明「23 億」的比較基礎', amount:'公共電視約 9 億、台語台約 8.9 億、小公視約 6 億', status:'釐清經費組成', description:'公視表示 23 億涵蓋多個頻道與服務，並非單一公共電視頻道的預算。', source:'https://www.mnews.tw/story/20250121nm021' },
+      { date:'2025/1/21', label:'協商結果', kind:'result', type:'審查結果', title:'114 年度：刪減案縮為 2,300 萬元', amount:'2,300 萬元', status:'已報導為協商後結果', description:'原刪除 23 億的提案經黨團協商後大幅縮減。', source:'https://www.mnews.tw/story/20250121nm021' },
+      { date:'2025/5/19', label:'任期屆滿', kind:'proposal', type:'治理事件', title:'公廣董監事任期屆滿', amount:'—', status:'人事改選爭議延續', description:'董監事改選未能順利完成，之後被援引作為預算刪凍提案的理由之一。', source:'https://www.mirrormedia.mg/story/20260311inv003' },
+      { date:'2025 年底', label:'改選卡關', kind:'proposal', type:'治理事件', title:'多輪投票未達董事組成門檻', amount:'僅 4 位董事通過（Mesh 報導）', status:'改選仍未完成', description:'Mesh 報導指出，年底經 3 輪投票，通過人數仍未達組成門檻。', source:'https://www.mirrormedia.mg/story/20260311inv003' },
+      { date:'2026/7/29', label:'新一輪提案', kind:'proposal', type:'預算提案', title:'115 年度：提案刪凍逾 10 億元', amount:'逾 10 億元；TaiwanPlus 近乎全刪提案', status:'仍在審查，尚未定案', description:'公視董監事會警告可能衝擊節目、兒少內容與戲劇製作，並主張不應將人事改選僵局轉嫁至營運預算。', source:'https://www.mirrormedia.mg/story/20260729edi023' }
+    ];
+    const events = document.getElementById('events');
+    const detail = document.getElementById('detail');
+    function select(i) {
+      const item = data[i];
+      document.querySelectorAll('.event').forEach((button, index) => button.setAttribute('aria-selected', index === i));
+      document.getElementById('type').textContent = item.type;
+      document.getElementById('title').textContent = item.title;
+      document.getElementById('description').textContent = item.description;
+      document.getElementById('fact-date').textContent = item.date;
+      document.getElementById('amount').textContent = item.amount;
+      document.getElementById('status').textContent = item.status;
+      document.getElementById('source').href = item.source;
+      detail.dataset.kind = item.kind;
+    }
+    data.forEach((item, i) => {
+      const button = document.createElement('button');
+      button.className = 'event'; button.type = 'button'; button.dataset.kind = item.kind;
+      button.innerHTML = `<span class="dot" aria-hidden="true"></span><span class="date">${item.date}</span><span class="label">${item.label}</span>`;
+      button.addEventListener('click', () => select(i)); events.appendChild(button);
+    });
+    select(data.length - 1);
+  </script>
+</body>
+</html>
