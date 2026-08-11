@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Covid-19 期間，台灣疫苗大事記</title>
+  <desc id="desc">Cocoa.Cool 疫苗專題的插畫封面：一只標有 AZ 和 mRNA 的疫苗瓶，與採購、捐贈、批次、接種四個紀錄標籤。</desc>
+  <rect width="1200" height="630" fill="#f0f2f7"/>
+  <rect x="64" y="56" width="1072" height="1" fill="#c1c7d3"/>
+  <text x="65" y="43" fill="#3b65d9" font-family="Arial, sans-serif" font-size="23" font-weight="700" letter-spacing="1">Cocoa.Cool</text>
+  <text x="65" y="126" fill="#3b65d9" font-family="monospace" font-size="15" letter-spacing="2">TAIWAN COVID-19 VACCINES / 2020–2026</text>
+  <text x="65" y="222" fill="#202637" font-family="Arial, sans-serif" font-size="64" font-weight="700">Covid-19 期間，</text>
+  <text x="65" y="302" fill="#d7597e" font-family="Arial, sans-serif" font-size="64" font-weight="700">台灣疫苗大事記</text>
+  <text x="67" y="356" fill="#626b7b" font-family="Arial, sans-serif" font-size="20">採購、捐贈專案、批次與冷鏈、接種計畫</text>
+  <g transform="translate(795 118) rotate(6 150 175)">
+    <rect x="55" y="0" width="190" height="67" rx="9" fill="#f2c84b" stroke="#202637" stroke-width="5"/>
+    <rect x="0" y="60" width="300" height="330" rx="27" fill="#fbfcff" stroke="#202637" stroke-width="5"/>
+    <line x1="0" x2="300" y1="290" y2="290" stroke="#202637" stroke-width="5"/>
+    <rect x="43" y="129" width="81" height="43" rx="3" fill="#3b65d9"/>
+    <text x="61" y="158" fill="#fff" font-family="monospace" font-size="22" font-weight="700">AZ</text>
+    <rect x="139" y="129" width="112" height="43" rx="3" fill="#d7597e"/>
+    <text x="154" y="158" fill="#fff" font-family="monospace" font-size="20" font-weight="700">mRNA</text>
+    <path d="M44 290h52v88H44z" fill="#82b2ed" stroke="#202637" stroke-width="5"/>
+    <path d="M124 290h52v88h-52z" fill="#f2c84b" stroke="#202637" stroke-width="5"/>
+    <path d="M204 290h52v88h-52z" fill="#b9aaee" stroke="#202637" stroke-width="5"/>
+  </g>
+  <g font-family="monospace" font-size="14" font-weight="700" fill="#202637">
+    <rect x="66" y="464" width="242" height="65" fill="#fbfcff" stroke="#202637"/>
+    <text x="84" y="491">01 / PROCUREMENT</text><text x="84" y="515" fill="#626b7b">採購與供貨規劃</text>
+    <rect x="326" y="464" width="242" height="65" fill="#fbfcff" stroke="#202637"/>
+    <text x="344" y="491">02 / DONATION</text><text x="344" y="515" fill="#626b7b">捐贈專案與程序</text>
+    <rect x="586" y="464" width="242" height="65" fill="#fbfcff" stroke="#202637"/>
+    <text x="604" y="491">03 / LOT &amp; COLD</text><text x="604" y="515" fill="#626b7b">批次與冷鏈</text>
+    <rect x="846" y="464" width="242" height="65" fill="#fbfcff" stroke="#202637"/>
+    <text x="864" y="491">04 / VACCINATION</text><text x="864" y="515" fill="#626b7b">接種計畫與資格</text>
+  </g>
+  <text x="66" y="590" fill="#626b7b" font-family="monospace" font-size="13" letter-spacing="1">COCOA.COOL / INTERACTIVE NEWS</text>
+</svg>
