@@ -9,7 +9,7 @@
     'public-media-budget-timeline.html': ['公視／公廣預算爭議時間軸｜Cocoa.Cool', '沿著預算、治理與公共服務，閱讀公視／公廣的制度脈絡。', 'article'],
     'central-appointments-dashboard.html': ['人事空窗，誰在等？｜Cocoa.Cool', '用席位與程序理解中央政府人事空缺及其制度影響。', 'article'],
     'bnt-vaccine-two-tracks.html': ['Covid-19 期間，台灣疫苗大事記｜Cocoa.Cool', '從採購、捐贈專案到批次與接種資格，沿著可核對的行政紀錄理解台灣的 Covid-19 疫苗歷程。', 'article', `${site}/assets/vaccine-record-og.png`],
-    'taipei-child-protection-case.html': ['十歲女童兒少保護爭議｜Cocoa.Cool', '以公開報導與制度資料，整理台北市十歲女童案件中的通報、評估、安置與後續檢討爭點。', 'article']
+    'taipei-child-protection-case.html': ['台北市十歲女童性猥褻案：240 天裡，誰做了什麼決定？｜Cocoa.Cool', '以公開報導與制度資料，整理台北市十歲女童性猥褻案中的通報、評估、安置與後續檢討爭點。', 'article']
   };
   const file = location.pathname.split('/').pop() || 'index.html';
   const [title, description, type, image = fallbackImage] = pages[file] || pages['index.html'];
