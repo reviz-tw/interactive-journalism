@@ -2,6 +2,7 @@
   const site = 'https://cocoa.cool';
   const fallbackImage = `${site}/assets/cocoa-cool-og.png`;
   const pages = {
+    'taipei-electorate.html': ['台北，真的藍大於綠嗎？｜Cocoa.Cool', '探索台北三十年總統與市長選票、行政區與里差異，以及歷年投票率與得票結果。', 'article', `${site}/assets/taipei-electorate-cover.png`],
     'index.html': ['Cocoa.Cool｜互動新聞策展', '從現有新聞出發，以名單、席位、批號、證據與預算等資料結構重新閱讀議題。', 'website'],
     'baseball-heat-to-asiad.html': ['從 12 強到名古屋亞運｜Cocoa.Cool', '用國手履歷與賽事資格，理解一份亞運徵召名單。', 'article'],
     'si-guang-yang-case-file.html': ['佀廣洋爭議事件檔案｜Cocoa.Cool', '以證據狀態與可回查來源，梳理佀廣洋近期爭議。', 'article'],
