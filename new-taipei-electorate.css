@@ -1,0 +1,4 @@
+@import url('taipei-electorate.css');
+:root{--paper:#fffdf3;--orange:#f0cd32;--line:#ddd6bc}
+.hero{position:relative}h1{font-size:clamp(40px,5.8vw,76px);letter-spacing:-2px;line-height:1.22}h1 span{color:var(--ink);background:linear-gradient(transparent 67%,#f0cd32 67%,#f0cd32 96%,transparent 96%)}.eyebrow{color:#716015}.notice{background:#f8efbc;border-left-color:#d6b52b}.history-row:hover,.history-row.active,.region-year-row:hover,.region-year-row[aria-expanded=true]{background:#faf1c6}.view-switch button[aria-pressed=true]{color:#242720}.region-turnout b{color:#746015}.turnout-track{background:#eae6d4}.panel{background:#fffef9}.chapter-nav{background:#fffdf3}.electorate-cover img{border:1px solid #ddd6bc}button:hover{border-color:#9a821a}:focus-visible{outline-color:#9a821a}
+@media(max-width:720px){h1{font-size:38px;letter-spacing:-1.5px}.intro p:first-child{font-size:20px}}
