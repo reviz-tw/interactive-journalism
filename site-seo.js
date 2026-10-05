@@ -2,6 +2,7 @@
   const site = 'https://cocoa.cool';
   const fallbackImage = `${site}/assets/cocoa-cool-og.png`;
   const pages = {
+    'kaohsiung-electorate.html': ['高雄｜想要改變的城市，選票怎麼走？｜Cocoa.Cool', '高雄曾選擇換人做做看，也曾投票讓市長提前離開。從38區的歷次選票，看一座城市如何在市長、總統與罷免之間，尋找自己的方向。', 'article', 'https://www.thecocoa.cool/assets/kaohsiung-electorate-cover.png?v=822b7fcd83'],
     'new-taipei-electorate.html': ['新北｜藍營長期執政，選民結構怎麼看｜Cocoa.Cool', '新北藍營長期執政，選民的政治期待卻只有一種嗎？以 13 次選舉、29 區與各里資料，比較首長與總統選票、投票率及選民尋找不同政治方向的線索。', 'article', 'https://www.thecocoa.cool/assets/new-taipei-electorate-cover.png?v=b538692cb0'],
     'taipei-electorate.html': ['台北，真的藍大於綠嗎？｜Cocoa.Cool', '探索台北三十年總統與市長選票、行政區與里差異，以及歷年投票率與得票結果。', 'article', `${site}/assets/taipei-electorate-cover.png`],
     'index.html': ['Cocoa.Cool｜互動新聞策展', '從現有新聞出發，以名單、席位、批號、證據與預算等資料結構重新閱讀議題。', 'website'],
@@ -15,7 +16,7 @@
   };
   const file = location.pathname.split('/').pop() || 'index.html';
   const [title, description, type, image = fallbackImage] = pages[file] || pages['index.html'];
-  const canonical = `${file==='new-taipei-electorate.html'?'https://www.thecocoa.cool':site}/${file}`;
+  const canonical = `${['new-taipei-electorate.html','kaohsiung-electorate.html'].includes(file)?'https://www.thecocoa.cool':site}/${file}`;
   const upsert = (selector, attrs) => {
     let element = document.head.querySelector(selector);
     if (!element) { element = document.createElement('meta'); document.head.appendChild(element); }
