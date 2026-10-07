@@ -3,6 +3,7 @@
   const fallbackImage = `${site}/assets/cocoa-cool-og.png`;
   const pages = {
     'taichung-electorate.html': ['台中｜市長選得明確，總統有三種選擇｜Cocoa.Cool', '盧秀燕在2022年領先台中29區，2024年總統選票卻分成三股。探索歷屆選舉、各區結果與投票率，理解市長支持與政黨選擇之間的距離。', 'article', 'https://www.thecocoa.cool/assets/taichung-electorate-cover.png'],
+    'tainan-electorate.html': ['台南｜市長沒換黨，選票卻有不同方向｜Cocoa.Cool', '2024年柯文哲在台南拿到23.44%，9區得票超過侯友宜。從37區的總統與市長選票，看綠營長期執政之下，選民如何做出不同選擇。', 'article', 'https://www.thecocoa.cool/assets/tainan-electorate-cover.png'],
     'kaohsiung-electorate.html': ['高雄｜走過嘗試，城市繼續蛻變｜Cocoa.Cool', '高雄曾嘗試不同的政治選擇，經歷罷免與重新選舉後，再由民進黨執政。從38區的歷次選票，回看這座城市走過的轉折。', 'article', 'https://www.thecocoa.cool/assets/kaohsiung-electorate-cover.png?v=830461caad'],
     'new-taipei-electorate.html': ['新北｜藍營長期執政，選民結構怎麼看｜Cocoa.Cool', '新北藍營長期執政，選民的政治期待卻只有一種嗎？以 13 次選舉、29 區與各里資料，比較首長與總統選票、投票率及選民尋找不同政治方向的線索。', 'article', 'https://www.thecocoa.cool/assets/new-taipei-electorate-cover.png?v=b538692cb0'],
     'taipei-electorate.html': ['台北，真的藍大於綠嗎？｜Cocoa.Cool', '探索台北三十年總統與市長選票、行政區與里差異，以及歷年投票率與得票結果。', 'article', `${site}/assets/taipei-electorate-cover.png`],
@@ -17,7 +18,7 @@
   };
   const file = location.pathname.split('/').pop() || 'index.html';
   const [title, description, type, image = fallbackImage] = pages[file] || pages['index.html'];
-  const canonical = `${['new-taipei-electorate.html','kaohsiung-electorate.html','taichung-electorate.html'].includes(file)?'https://www.thecocoa.cool':site}/${file}`;
+  const canonical = `${['new-taipei-electorate.html','kaohsiung-electorate.html','tainan-electorate.html','taichung-electorate.html'].includes(file)?'https://www.thecocoa.cool':site}/${file}`;
   const upsert = (selector, attrs) => {
     let element = document.head.querySelector(selector);
     if (!element) { element = document.createElement('meta'); document.head.appendChild(element); }
