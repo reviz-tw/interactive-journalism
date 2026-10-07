@@ -2,6 +2,8 @@
   const site = 'https://cocoa.cool';
   const fallbackImage = `${site}/assets/cocoa-cool-og.png`;
   const pages = {
+    'taipei-four-constituencies.html': ["台北｜立委一直選藍，總統卻未必｜Cocoa.Cool", "拆開台北四個立委選區、222個里的選票，對照2014–2024年總統、立委與市長選舉，看見政黨基本盤的延續與邊界。", "article", "https://www.thecocoa.cool/assets/taipei-four-constituencies-cover.png"],
+    'mountain-turnout.html': ['山地原住民鄉｜選縣市長比全縣踴躍，選總統反而落後｜Cocoa.Cool', '全國30個山地原住民鄉區，最近十次選舉中，縣市長選舉的投票率平均高出所屬縣市6到15個百分點，總統選舉卻低3到6個百分點。從茂林的九成投票率出發，整理數字，也列出還沒有答案的問題。', 'article', 'https://www.thecocoa.cool/assets/mountain-turnout-cover.png'],
     'taichung-electorate.html': ['台中｜市長選得明確，總統有三種選擇｜Cocoa.Cool', '盧秀燕在2022年領先台中29區，2024年總統選票卻分成三股。探索歷屆選舉、各區結果與投票率，理解市長支持與政黨選擇之間的距離。', 'article', 'https://www.thecocoa.cool/assets/taichung-electorate-cover.png'],
     'tainan-electorate.html': ['台南｜市長沒換黨，選票卻有不同方向｜Cocoa.Cool', '2024年柯文哲在台南拿到23.44%，9區得票超過侯友宜。從37區的總統與市長選票，看綠營長期執政之下，選民如何做出不同選擇。', 'article', 'https://www.thecocoa.cool/assets/tainan-electorate-cover.png'],
     'kaohsiung-electorate.html': ['高雄｜走過嘗試，城市繼續蛻變｜Cocoa.Cool', '高雄曾嘗試不同的政治選擇，經歷罷免與重新選舉後，再由民進黨執政。從38區的歷次選票，回看這座城市走過的轉折。', 'article', 'https://www.thecocoa.cool/assets/kaohsiung-electorate-cover.png?v=830461caad'],
@@ -18,7 +20,7 @@
   };
   const file = location.pathname.split('/').pop() || 'index.html';
   const [title, description, type, image = fallbackImage] = pages[file] || pages['index.html'];
-  const canonical = `${['new-taipei-electorate.html','kaohsiung-electorate.html','tainan-electorate.html','taichung-electorate.html'].includes(file)?'https://www.thecocoa.cool':site}/${file}`;
+  const canonical = `${['new-taipei-electorate.html','kaohsiung-electorate.html','tainan-electorate.html','taichung-electorate.html','mountain-turnout.html','taipei-four-constituencies.html'].includes(file)?'https://www.thecocoa.cool':site}/${file}`;
   const upsert = (selector, attrs) => {
     let element = document.head.querySelector(selector);
     if (!element) { element = document.createElement('meta'); document.head.appendChild(element); }
